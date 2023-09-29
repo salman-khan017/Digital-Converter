@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/Screenshot (30).png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Digital Convertor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Anton&family=Basic&family=Carter+One&family=DM+Serif+Display&family=Dai+Banna+SIL&family=Great+Vibes&family=Lobster+Two&family=Mooli&family=Oswald:wght@500&family=Philosopher:wght@700&family=Phudu&family=REM:wght@300&family=Roboto+Slab:wght@500&family=Rubik&family=Ubuntu:ital,wght@1,300&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: url(image/Leonardo_Diffusion_same_HD_0\(1\).jpg);
+            background-size: cover;
+            background-position: fixed;
+            text-align: center;
+        }
+        .title {
+            font-size: 40px;
+            color: rgb(0, 134, 252);
+            font-weight: 600;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 2rem 0;
+        }
+        .nav-flex-box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            background-color: #e7e7e7b7;
+        }
+        .logo{
+          width: 6rem;
+          border-radius: 50%;
+          margin-bottom: 1rem;
+          margin-left: 5vw;
+        }
+        .nav-flex-box ul li{
+            display: inline-block;
+            list-style-type: none;
+            margin-left: 2rem;
+            font-size: 19px;
+            font-family:'Mooli', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .nav-flex-box ul li a:hover{
+            color: rgb(35, 206, 140);
+            transition: 0.3s;
+        }
+        .nav-flex-box ul li a{
+            text-decoration: none;
+            color: #000;
+        }
+        .mode{
+            font-size: 20px;
+            margin-right: 8rem;
+            cursor: pointer;
+            color: #FFFF;
+            font-weight: 600;
+            background-color: rgb(35, 206, 140);
+            padding: 8px 0px;
+            border-radius: 17px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .sign{
+            background-color: rgb(35, 206, 140);
+            padding: 8px 12px;
+            border-top-left-radius: 17px;
+            border-bottom-left-radius: 17px;
+        }
+        .log{
+            background-color: rgb(21, 177, 117);
+            padding: 8px 12px;
+            border-top-right-radius: 17px;
+            border-bottom-right-radius: 17px;
+        }
+        .not{
+            width: 20rem;
+            height: 2.44rem;
+            background-color: rgb(202, 202, 202);
+            border: 0;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+            outline: none;
+            caret-color: rgb(4, 153, 96);
+            color: rgb(4, 153, 96);
+            font-size: 20px;
+        }
+        .btn{
+            padding: 9px 10px;
+            padding-bottom: 9px;
+            background-color: rgb(30, 210, 141);
+            color: #fff;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            border-left: 2px solid rgb(4, 153, 96);
+            cursor: pointer;
+        }
+        .result{
+            margin-top: 2.5rem;
+            font-size: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+        }
+        .red{
+            color: red;
+        }
+        footer{
+            background-color: #181818;
+            color: #fff;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 6rem;
+        }
+        .spany{
+            margin-top: 3rem;
+            color: rgb(0, 134, 252);
+            font-size: 18px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        @media (max-width: 600px) {
+          body{
+            background: url(image/mobile.jpg);
+            background-size: cover;
+          }
+          .logo{
+          width: 3rem;
+          margin-left: 4vw;
+        }
+        .nav-flex-box ul li{
+            margin-left: 10px;
+            font-size: 12px;
+        }
+        .mode{
+            font-size: 10px;
+            margin-right: 1rem;
+            background-color: none;
+            padding: 5px 0px;
+        }
+        .sign{
+            padding: 5px 3px;
+        }
+        .log{
+            padding: 5px 3px;
+        }
+        .not{
+            width: 15rem;
+        }
+        }
+    </style>
+</head>
+<body>
+    
+        <nav>
+            <div class="nav-flex-box">
+                <img src="image/Screenshot (30).png" class="logo">
+                <div>
+                    <ul>
+                        <li><a href="index.html" style="color: rgb(35, 206, 140);">Binary</a></li>
+                        <li><a href="octal.html">Octal</a></li>
+                        <li><a href="hexadecimal.html">Hexadecimal</a></li>
+                    </ul>
+                </div>
+                <div class="mode">
+                    <span class="sign">Sign up</span>
+                    <span class="log">Login</span>
+                </div>
+            </div>
+        </nav>
+    
+<div class="binary-container">
+    <p class="title">Decimal to Binary Converter</p>
+    <input type="text" class="not" placeholder="     Numbers...">
+    <span class="btn" onclick="convert()">Convert</span>
+         <p class="result"></p>
+</div>
+<footer>
+    <div class="spany">
+         copyright <i class="fa-solid fa-copyright"></i> by SALMAN KHAN.
+    </div>
+</footer>
+
+    
+<script>
+    function convert(){
+        let requst = document.querySelector('.not');
+        let requstV = Number(requst.value);
+        document.querySelector('.result').innerHTML = `Your result is : ${requstV.toString(2)}`
+
+        if (document.querySelector('.result').innerHTML == 'Your result is : NaN' ) {
+            document.querySelector('.result').innerHTML = '<span class="red">&#9888</span> Please enter only Number ! <span class="red">&#9888</span>'
+        }
+    };
+</script>
+</body>
+</html>
